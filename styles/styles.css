@@ -1,56 +1,72 @@
 /* NAVIGATION */
 nav {
-  background-color: darkblue;
+  background-color: #00008b; /* darkblue as hex for consistency */
   padding: 10px;
 }
 
 nav a {
-  color: white;
+  color: #fff; /* white as hex */
   display: block;
   padding: 20px;
+  text-decoration: none; /* Removes underline from links */
+}
+
+nav a:hover {
+  background-color: #0000cd; /* lighter blue on hover */
 }
 
 /* HEADINGS */
 h1 {
-  color: darkblue;
+  color: #00008b;
+  margin-bottom: 1rem;
 }
 
 /* MAIN CONTENT */
 main {
-  margin: 1rem;
+  margin: 1rem auto; /* Centers main content */
+  max-width: 800px; /* Prevents content from stretching too wide */
+  line-height: 1.6; /* Better readability */
 }
 
 main img {
   width: 150px;
   height: auto;
-  border: 1px solid black;
+  border: 1px solid #000;
   padding: 2px;
-  box-shadow: 0 0 30px gray;
+  box-shadow: 0 0 30px #808080; /* gray as hex */
+  display: block; /* Ensures proper spacing */
+  margin: 0 auto 1rem; /* Centers image and adds bottom margin */
 }
 
 /* PARAGRAPHS */
 p {
   padding: 0;
+  margin-bottom: 1rem; /* Space between paragraphs */
 }
 
-/* ASIDE (REQUIRED) */
+/* ASIDE */
 aside {
   width: 300px;
-  margin: 1rem;
-  border: 1px solid black;
+  margin: 1rem auto; /* Centers aside */
+  border: 1px solid #000;
   padding: 1rem;
   background-color: #f0f0f0;
   color: #333;
+  border-radius: 5px; /* Softens edges */
 }
 
 aside img {
   width: 200px;
   height: auto;
+  display: block;
+  margin: 0 auto 0.5rem; /* Centers image */
 }
 
-/* FOOTER (REQUIRED) */
+/* FOOTER */
 footer {
-  margin-top: 1rem;
-  border-top: 1px solid black;
+  margin-top: 2rem; /* More space above footer */
+  border-top: 1px solid #000;
   text-align: center;
+  padding: 1rem 0;
+  background-color: #f8f8f8; /* Light gray background */
 }
