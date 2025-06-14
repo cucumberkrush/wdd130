@@ -1,24 +1,41 @@
-/* ===== LIGHTHOUSE-GRADE RAFTING.CSS ===== */
-/* 1. CRITICAL PATH CSS (Inlined in <head>) */
 :root {
     --primary: #2a5f8b;
     --white: #fff;
     --text: #333;
+    --background: #fff;
+    --border: #ddd;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+    line-height: 1.6;
+}
+
+/* 2. LAYOUT STRUCTURE */
 header,
 main,
 footer {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* 3. HEADER STYLES */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: 1rem;
-    background: var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
 }
 
 nav {
@@ -30,11 +47,11 @@ nav {
 nav a {
     color: var(--white);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
+    padding: 0.5rem;
 }
 
-/* 2. NON-CRITICAL CSS (Loads after render) */
-/* Hero Section */
+/* 4. HERO SECTION */
 .hero {
     position: relative;
     margin: 1rem 0;
@@ -45,7 +62,7 @@ nav a {
     height: auto;
     display: block;
     aspect-ratio: 16/9;
-    /* Prevents layout shifts */
+    object-fit: cover;
 }
 
 .hero h1 {
@@ -56,15 +73,18 @@ nav a {
     text-align: center;
     color: var(--white);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero article {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
-    background: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 1rem;
     max-width: 400px;
+    color: var(--text);
 }
 
 .hero article img {
@@ -72,19 +92,22 @@ nav a {
     height: auto;
     max-height: 300px;
     object-fit: contain;
+    margin-bottom: 1rem;
 }
 
-/* Content Sections */
+/* 5. CONTENT SECTIONS */
 .history,
 .adventures {
     margin: 2rem 0;
     padding: 1rem;
+    background-color: var(--background);
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .gallery img {
@@ -92,28 +115,39 @@ nav a {
     height: auto;
     aspect-ratio: 3/2;
     border-radius: 4px;
+    border: 1px solid var(--border);
 }
 
-/* Footer */
+/* 6. FOOTER STYLES */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
-    border-top: 1px solid #ddd;
+    padding: 1rem;
+    border-top: 1px solid var(--border);
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.sociallinks {
+    display: flex;
+    gap: 1rem;
 }
 
 .sociallinks img {
     width: 32px;
     height: 32px;
+    transition: opacity 0.3s ease;
 }
 
-/* 3. PERFORMANCE ENHANCEMENTS */
+.sociallinks img:hover {
+    opacity: 0.8;
+}
+
+/* 7. PERFORMANCE ENHANCEMENTS */
 @media (prefers-reduced-motion: no-preference) {
     .gallery img {
         transition: transform 0.3s ease;
-        will-change: transform;
-        /* GPU acceleration */
     }
 
     .gallery img:hover {
@@ -121,7 +155,7 @@ footer {
     }
 }
 
-/* 4. MOBILE LAYOUT */
+/* 8. MOBILE LAYOUT */
 @media (max-width: 768px) {
     header {
         grid-template-columns: 1fr;
@@ -131,18 +165,19 @@ footer {
     nav {
         justify-content: center;
         margin-top: 1rem;
+        flex-wrap: wrap;
     }
 
     .hero article {
         position: static;
         max-width: 100%;
         margin-top: 1rem;
+        background-color: var(--background);
     }
 }
 
-/* 5. PRINT STYLES */
+/* 9. PRINT STYLES */
 @media print {
-
     nav,
     .sociallinks {
         display: none;
@@ -150,5 +185,16 @@ footer {
 
     .hero {
         break-after: page;
+    }
+
+    body {
+        color: #000;
+        background-color: #fff;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        font-weight: normal;
     }
 }
