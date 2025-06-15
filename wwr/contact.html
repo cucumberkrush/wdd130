@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Contact White Water Rafting - Reach out with inquiries, reservations, or feedback" />
+    <meta name="author" content="Chukwu Marvel" />
+    <title>Contact Us | White Water Rafting</title>
+    <link rel="stylesheet" href="styles/rafting.css" />
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="White Water Rafting Logo" width="100" />
+        <h1>White Water Rafting</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Information Section -->
+        <section class="contact-info">
+            <h2>Get in Touch</h2>
+            <p><strong>Address:</strong> 123 River Trail, Rapidsville, CO 81234</p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p><strong>Email:</strong> info@whitewaterrafting.com</p>
+            <!-- Google Maps Embed using an iframe -->
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.633714173417!2d-104.9848536845945!3d39.739235679447756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78d4ac5b2b2d%3A0x1e4e8e9cd92d381e!2sColorado%2C%20USA!5e0!3m2!1sen!2sus!4v1600000000000"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Meet Our Team Section -->
+        <section class="team">
+            <h2>Meet Our Team</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Lena – Lead Adventure Guide" />
+                    <figcaption>Lena – Lead Adventure Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="David – Safety Officer" />
+                    <figcaption>David – Safety Officer</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Ammera – Guest Services" />
+                    <figcaption>Ammera – Guest Services</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form">
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" required />
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+
+                <fieldset>
+                    <legend>Purpose of Message:</legend>
+                    <label for="inquiry">
+                        <input type="radio" id="inquiry" name="purpose" value="general" required />
+                        General Inquiry
+                    </label><br />
+                    <label for="reservation">
+                        <input type="radio" id="reservation" name="purpose" value="reservation" />
+                        Reservation Question
+                    </label><br />
+                    <label for="suggestion">
+                        <input type="radio" id="suggestion" name="purpose" value="suggestion" />
+                        Website Suggestion
+                    </label>
+                </fieldset>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" autocomplete="off" rows="5" required></textarea>
+
+                <label>
+                    <input type="checkbox" name="subscribe" />
+                    Please subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 White Water Rafting | Chukwu Marvel</p>
+        <nav class="sociallinks">
+            <a href="https://facebook.com"><img src="images/facebook.svg" alt="Facebook" /></a>
+            <a href="https://twitter.com"><img src="images/twitter.svg" alt="Twitter" /></a>
+            <a href="https://instagram.com"><img src="images/instagram.svg" alt="Instagram" /></a>
+        </nav>
+        <p><a href="images/contact-wireframe.png">View Contact Page Wireframe</a></p>
+    </footer>
+</body>
+
+</html>

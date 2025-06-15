@@ -1,11 +1,4 @@
-:root {
-  --primary: #2a5f8b;
-  --white: #fff;
-  --text: #333;
-  --background: #fff;
-  --border: #ddd;
-}
-
+/* Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -14,176 +7,221 @@
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
-  color: var(--text);
-  background-color: var(--background);
   line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
 }
 
-/* Layout structure */
-header, main, footer {
-  width: 100%;
+.container {
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
-/* Header: CSS Grid for logo, title, and nav */
+/* =======================================================
+   Header Styles
+   ======================================================= */
 header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  padding: 1rem 0;
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: #005f73;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 header img {
-  max-width: 100%;
-  height: auto;
+  vertical-align: middle;
 }
 
 header h1 {
-  font-size: 1.5em;
-  text-align: center;
-  color: var(--white);
-  margin: 0 1rem;
+  display: inline;
+  margin-left: 10px;
+  font-size: 2rem;
 }
 
-header nav {
-  display: flex;
-  gap: 1rem;
+/* Navigation Styles */
+nav {
+  margin-top: 10px;
 }
 
-header nav a {
-  color: var(--white);
+nav a {
+  color: #fff;
   text-decoration: none;
-  font-weight: 700;
-  padding: 0.5rem;
+  margin-right: 15px;
+  font-weight: bold;
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  margin: 1rem 0;
+nav a:hover {
+  text-decoration: underline;
 }
 
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 16/9;
-  object-fit: cover;
+/* =======================================================
+   Main Content Styles
+   ======================================================= */
+main {
+  margin: 20px 0;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: var(--white);
-  padding: 1rem 2rem;
-  border-radius: 5px;
+/* Contact Information Section */
+.contact-info {
+  background: #e0fbfc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
-.hero-overlay h2 {
-  margin-bottom: 0.5rem;
+.contact-info h2 {
+  margin-bottom: 15px;
+  font-size: 1.75rem;
 }
 
-/* History Section */
-.history {
-  margin: 2rem 0;
-  padding: 1rem;
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
-.history h2 {
-  margin-bottom: 1rem;
-  color: var(--primary);
+/* Map Container */
+.map {
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-/* Adventures Section */
-.adventures {
-  margin: 2rem 0;
-  padding: 1rem;
+/* Meet Our Team Section */
+.team {
+  margin-bottom: 20px;
 }
 
-.adventures h2 {
-  margin-bottom: 1rem;
-  color: var(--primary);
+.team h2 {
+  margin-bottom: 15px;
+  font-size: 1.75rem;
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-
-/* Footer */
-footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-footer p {
-  font-size: 0.9em;
+.gallery figure {
+  width: 32%;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.sociallinks {
+.gallery figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.gallery figcaption {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Contact Form Section */
+.contact-form {
+  background: #edf6f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-form h2 {
+  margin-bottom: 15px;
+  font-size: 1.75rem;
+}
+
+.contact-form form {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
 }
 
-.sociallinks img {
-  width: 32px;
-  height: 32px;
-  transition: opacity 0.3s ease;
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.sociallinks img:hover {
-  opacity: 0.8;
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
-/* Responsive Layout */
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form fieldset {
+  border: none;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.contact-form fieldset legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.contact-form button {
+  background-color: #005f73;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form button:hover {
+  background-color: #0a9396;
+}
+
+/* =======================================================
+   Footer Styles
+   ======================================================= */
+footer {
+  background-color: #005f73;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+footer .sociallinks a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* =======================================================
+   Responsive Media Queries
+   ======================================================= */
 @media (max-width: 768px) {
-  header {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .gallery {
+    flex-direction: column;
   }
-  header nav {
-    justify-content: center;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-  }
-  .hero-overlay {
-    position: static;
-    transform: none;
-    margin: 1rem auto;
-  }
-}
-
-/* Print Styles */
-@media print {
-  nav,
-  .sociallinks {
-    display: none;
-  }
-  body {
-    color: #000;
-    background-color: #fff;
-  }
-  a::after {
-    content: " (" attr(href) ")";
-    font-size: 0.8em;
+  
+  .gallery figure {
+    width: 100%;
   }
 }
