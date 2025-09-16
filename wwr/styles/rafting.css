@@ -19,12 +19,6 @@ body {
   background: #fff;
 }
 
-/* Limit page width and center content */
-header, main, footer {
-  width: 840px;
-  margin: 0 auto;
-}
-
 header {
   text-align: center;
   padding: 24px 0 8px 0;
@@ -65,33 +59,34 @@ main {
   padding: 24px 0;
 }
 
-main img {
+.hero {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.hero img {
   display: block;
   width: 100%;
   max-width: 700px;
-  margin: 0 auto 24px auto;
+  margin: 0 auto 16px auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(44,62,80,0.08);
 }
 
-h1, h2 {
+.hero h1 {
   font-family: var(--heading-font);
   color: var(--primary-color);
-  margin-bottom: 12px;
-}
-
-h1 {
-  text-align: left;
   font-size: 2rem;
   margin-bottom: 16px;
 }
 
-article {
-  margin-bottom: 24px;
+.hero article {
   overflow: auto;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
-article img {
+.hero article img {
   float: left;
   width: 120px;
   margin: 0 16px 8px 0;
@@ -99,7 +94,7 @@ article img {
   box-shadow: 0 2px 8px rgba(44,62,80,0.10);
 }
 
-article p {
+.hero article p {
   font-size: 1.05rem;
   line-height: 1.6;
 }
@@ -110,6 +105,12 @@ section {
   box-shadow: 0 2px 8px rgba(44,62,80,0.08);
   padding: 16px;
   margin-bottom: 20px;
+}
+
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 12px;
 }
 
 footer {
@@ -142,52 +143,4 @@ footer nav.socialmedia img {
 
 footer nav.socialmedia img:hover {
   transform: scale(1.2);
-}
-
-/* Hero section styles */
-.hero {
-  position: relative;
-  min-height: 320px;
-  background-image: url('../images/hero.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  overflow: hidden;
-}
-
-/* Overlay heading */
-.hero h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  opacity: 0.7;
-  background-color: var(--accent1-color);
-  color: #fff;
-  font-size: 2.5rem;
-  border-radius: 8px;
-}
-
-/* Overlay article */
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: rgba(244, 162, 97, 0.85); /* semi-transparent overlay */
-  color: var(--primary-color);
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
-}
-
-/* Happy client image in hero article */
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 16px;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(44,62,80,0.15);
 }
