@@ -87,9 +87,9 @@ main {
 }
 
 .hero article img {
-  float: left;
+  float: right;
   width: 120px;
-  margin: 0 16px 8px 0;
+  margin-left: 16px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(44,62,80,0.10);
 }
