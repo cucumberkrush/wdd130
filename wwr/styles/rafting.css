@@ -3,7 +3,7 @@
   --secondary-color: #f4a261;
   --accent1-color: #264653;
   --accent2-color: #e9c46a;
-  --heading-font: "Times New Roman", Georgia, serif;
+  --heading-font: "Times New Roman", "Georgia", serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
@@ -17,7 +17,6 @@ body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background: #fff;
-  line-height: 1.6;
 }
 
 /* HEADER GRID LAYOUT */
@@ -59,7 +58,7 @@ nav ul li a:hover {
 main {
   max-width: 900px;
   margin: 0 auto;
-  padding: 24px 20px;
+  padding: 24px 0;
 }
 
 /* HERO */
@@ -119,25 +118,12 @@ section {
   margin-bottom: 40px;
 }
 
-h1,
-h2 {
+h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
   margin-bottom: 12px;
 }
 
-<<<<<<< HEAD
-/* ADVENTURES SECTION */
-.adventures {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.adventures figure {
-  flex: 1 1 calc(20% - 16px);
-=======
 /* ADVENTURES SECTION - HORIZONTAL LAYOUT */
 .adventures {
   display: flex;
@@ -152,7 +138,6 @@ h2 {
 .adventures figure {
   flex: 0 0 auto;
   width: 180px;
->>>>>>> 84c3233560c1462a3588877d033f9cb234b0c836
   background: #fefefe;
   border-radius: 10px;
   text-align: center;
@@ -162,11 +147,7 @@ h2 {
 
 .adventures figure img {
   width: 100%;
-<<<<<<< HEAD
-  height: 150px;
-=======
   height: 100px;
->>>>>>> 84c3233560c1462a3588877d033f9cb234b0c836
   object-fit: cover;
   border-radius: 8px;
 }
@@ -178,19 +159,12 @@ h2 {
   color: var(--accent1-color);
 }
 
-<<<<<<< HEAD
 /* FOOTER */
-=======
-<<<<<<< HEAD
-/* FOOTER */
-=======
->>>>>>> 84c3233560c1462a3588877d033f9cb234b0c836
->>>>>>> e72e1f15b38075d33aa0a4425c4ddb62a654a6fe
 footer {
   background: var(--primary-color);
   color: #fff;
   text-align: left;
-  padding: 24px 40px;
+  padding: 24px 40px 8px 40px;
   margin-top: 40px;
   border-radius: 0 0 8px 8px;
   display: flex;
@@ -216,8 +190,6 @@ footer nav.socialmedia img {
 footer nav.socialmedia img:hover {
   transform: scale(1.2);
 }
-<<<<<<< HEAD
-=======
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -254,4 +226,3 @@ footer nav.socialmedia img:hover {
     text-align: center;
   }
 }
->>>>>>> 84c3233560c1462a3588877d033f9cb234b0c836
