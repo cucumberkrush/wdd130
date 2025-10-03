@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Rapids Water Wonders</title>
+    <meta name="description"
+        content="Get in touch with Rapids Water Wonders. Contact information, location map, and contact form for rafting inquiries.">
+    <meta name="author" content="Chukwu Marvel">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Rafting Company Logo" width="120">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>Contact Rapids Water Wonders</h1>
+            <article>
+                <p>Get in touch with our team for any questions about our rafting adventures!</p>
+            </article>
+        </div>
+
+        <section class="contact-info">
+            <h2>Our Contact Information</h2>
+            <div class="contact-details">
+                <div class="address">
+                    <h3>Address</h3>
+                    <p>123 River Adventure Lane<br>
+                        Rapids City, RC 12345<br>
+                        United States</p>
+                </div>
+                <div class="phone">
+                    <h3>Phone Numbers</h3>
+                    <p>Main Office: (555) 123-RAFT<br>
+                        Reservations: (555) 123-TRIP<br>
+                        Emergency: (555) 123-HELP</p>
+                </div>
+                <div class="email">
+                    <h3>Email</h3>
+                    <p>info@rapidswaterwonders.com<br>
+                        reservations@rapidswaterwonders.com<br>
+                        safety@rapidswaterwonders.com</p>
+                </div>
+            </div>
+
+            <div class="map">
+                <h3>Find Us</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.177631294489!2d-111.89194968459426!3d40.71278397933085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528a6c5f7549e7%3A0x5f5a5b5b5b5b5b5b!2s123%20River%20Adventure%20Ln%2C%20Rapids%20City%2C%20RC%2012345!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                    width="600" height="450" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="employees">
+            <h2>Meet Our Team</h2>
+            <div class="employee-profiles">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Sarah Johnson - Head Guide">
+                    <figcaption>Sarah Johnson<br>Head Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Mike Rodriguez - Safety Director">
+                    <figcaption>Mike Rodriguez<br>Safety Director</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Emily Chen - Reservations Manager">
+                    <figcaption>Emily Chen<br>Reservations Manager</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="submit-form.php" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Purpose of Message:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="general" name="purpose" value="general" required>
+                        <label for="general">General Inquiry</label>
+
+                        <input type="radio" id="reservation" name="purpose" value="reservation">
+                        <label for="reservation">Reservation Question</label>
+
+                        <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                        <label for="suggestion">Website Suggestion</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Rapids Water Wonders | Chukwu Marvel</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.svg" alt="Facebook" width="24">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.svg" alt="Twitter" width="24">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.svg" alt="Instagram" width="24">
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
