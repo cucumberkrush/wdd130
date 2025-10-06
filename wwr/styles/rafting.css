@@ -229,7 +229,7 @@ footer nav.socialmedia a {
 
 footer nav.socialmedia img {
   vertical-align: middle;
-  width: 30px;
+  width: 40px;
   transition: transform 0.2s;
   filter: brightness(0) invert(1);
 }
